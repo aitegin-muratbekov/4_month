@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Directors</title>
+</head>
+<body>
+{% for director in director_list %}
+    <a href="/director/{{director.id}}/films/">
+    <button>Director: {{director.name}}</button>
+    <hr>
+    </a>
+{% endfor %}
+</body>
+</html>
