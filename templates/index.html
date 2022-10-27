@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<a href="/time/">
-    <button>What time is it?</button>
-</a>
-<a href="/about_us/">
-    <button>About Us</button>
-</a>
-<a href="/films/">
-    <button>Films</button>
-</a>
-<h1>What's UP</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="/time/">
+            <button type="button" class="btn btn-primary btn-sm">TIME</button>
+        </a>
+        <a href="/about_us/">
+            <button type="button" class="btn btn-primary btn-sm">About_Us</button>
+        </a>
+        <a href="/films/">
+            <button type="button" class="btn btn-primary btn-sm">Films</button>
+        </a>
+    </div>
+    <h1>What's UP</h1>
+{% endblock %}

@@ -1,12 +1,12 @@
 from django.shortcuts import render, HttpResponse
 from datetime import date
-from main1.models import Film, Director
+from main1.models import Film, Director, Comments
 # Create your views here.
 def film_detail_view(request, id):
     dict_ = {}
     film = Film.objects.get(id=id)
     dict_['film_detail'] = film
-
+    dict_['comm_list'] = Comments.objects.filter(film_id = film)
     return render(request, 'detail.html', context= dict_)
 
 
@@ -26,7 +26,7 @@ def date_now(request):
 
 def film_list_view(request):
     dict_ = {
-        'film_list' : Film.objects.all()
+        'film_list' : Film.objects.all(),
     }
     return render(request, 'films.html', context=dict_)
 

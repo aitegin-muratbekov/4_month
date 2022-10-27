@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Films</title>
-</head>
-<body>
-<a href = '/directors/'>
-    <button>Sort with directors</button>
-</a>
-<h1>All films</h1>
-{% for film in film_list %}
-    <a href="/film/{{film.id}}/">
-        <h3>Title: {{ film.title }}</h3>
-        <h3>Director: {{film.film_director}}</h3>
-    </a>
-    <hr>
-{% endfor %}
+{% extends 'base.html' %}
+{% block content %}
 
-</body>
-</html>
+    <a href = '/directors/'>
+        <button>Sort with directors</button>
+    </a>
+    <h1>All films</h1>
+    {% for film in film_list %}
+        <a href="/film/{{film.id}}/">
+            <h3>Title: {{ film.title }}</h3>
+            <h3>Director: {{film.film_director}}</h3>
+        </a>
+        <hr>
+    {% endfor %}
+{% endblock %}

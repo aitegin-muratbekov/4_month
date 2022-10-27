@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ film_detail.title}}</title>
-</head>
-<body>
-<a href = '/films/'>
-    <button>
-        back
-    </button>
-</a>
-<h1>Film Detail</h1>
-<h3>Title:{{ film_detail.title}}</h3>
-<p>Rating: {{ film_detail.rating}}</p>
-<p>Time:{{ film_detail.time}}</p>
-<p>Director:{{ film_detail.film_director}}</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <a href = '/films/'>
+        <button>
+            back
+        </button>
+    </a>
+    <h1>Film Detail</h1>
+    <h3>Title:{{ film_detail.title}}</h3>
+    <p>Rating: {{ film_detail.rating}}</p>
+    <p>Time:{{ film_detail.time}}</p>
+    <p>Director:{{ film_detail.film_director}}</p>
+    <h4></h4>
+    <hr>
+    <hr>
+    <hr>
+    <h3>COMMENTS</h3>
+    {% for i in comm_list %}
+        <h4>{{i.nick}}</h4>
+        <h4>{{i.comm}}</h4>
+    {% endfor %}
+{% endblock %}
