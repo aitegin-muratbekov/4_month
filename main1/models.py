@@ -14,6 +14,7 @@ class Film(models.Model):
     time = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True, null=True)
     updated = models.DateTimeField(auto_now=True, null=True)
+    image = models.ImageField(upload_to='images', null=True, blank=True)
 
 
     def __str__(self):

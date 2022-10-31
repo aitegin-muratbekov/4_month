@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/directors/create_d/" method="post" style="padding: 28px 150px">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create Director" class="btn btn-dark">
+</form>
+{% endblock %}

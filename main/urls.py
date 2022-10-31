@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path
 from main1 import views
 
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('index/', views.index_view),
@@ -26,5 +25,11 @@ urlpatterns = [
     path('films/', views.film_list_view),
     path('film/<int:id>/', views.film_detail_view),
     path('directors/', views.directors_view),
-    path('director/<int:id>/films/', views.director_detail_view)
+    path('director/<int:id>/films/', views.director_detail_view),
+    path('films/create/', views.film_create_view),
+    path('directors/create_d/', views.director_create_view),
+    path('register/', views.register_view),
+    path('login/', views.login_view),
+    path('logout/', views.logout_view),
+    path('search/', views.search_view)
 ]

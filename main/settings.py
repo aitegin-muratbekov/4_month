@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Bishkek"
 
 USE_I18N = True
 
@@ -118,6 +118,9 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = 'static'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = 'media'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static_in_dev",
